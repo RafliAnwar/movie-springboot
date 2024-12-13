@@ -1,10 +1,12 @@
 package dev.dzul.movie.movie;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.Date;
 
 @Data
+@AllArgsConstructor
 public class ResponseDTO {
     private Long id;
     private String genre_name;
@@ -16,4 +18,6 @@ public class ResponseDTO {
     private String photo;
     private String videoUrl;
     private Date releaseDate;
+
+    public ResponseDTO(){}
 }

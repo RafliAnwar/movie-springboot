@@ -18,29 +18,36 @@ public class MovieService {
     @Autowired
     private GenreRepository genreRepository;
 
-    public List<Movie> getAllMovies() {
-        return movieRepository.findAllByOrderByIdAsc();
+    public List<ResponseDTO> getAllMovies() {
+        List<Movie> movies = movieRepository.findAllByOrderByIdAsc();
+        return movies.stream().map(this::mapEntityToDto).toList(); // Convert Movie to ResponseDTO
     }
 
-    public List<Movie > findAllMoviesByTitle(String genre, String title) { return movieRepository.findAllByGenre_GenreNameContainingIgnoreCaseOrTitleContainingIgnoreCase(genre, title); } // <Movie>
+    public List<ResponseDTO> findAllMoviesByTitle(String genre, String title) {
+        List<Movie> movies = movieRepository.findAllByGenre_GenreNameContainingIgnoreCaseOrTitleContainingIgnoreCase(genre, title);
+        return movies.stream().map(this::mapEntityToDto).toList(); // Convert Movie to ResponseDTO
+    }
 
     public Movie getMovieById(Long id) {
         return movieRepository.findById(id).orElse(null);
     }
 
-    public Movie createMovie(MovieDTO movieDTO) {
+    public ResponseDTO createMovie(MovieDTO movieDTO) {
         Movie movie = new Movie();
-        mapDtoToEntity(movieDTO, movie);
-        return movieRepository.save(movie);
+        mapDtoToEntity(movieDTO, movie); // Map request body DTO to Entity
+        Movie savedMovie = movieRepository.save(movie); // Save to the database
+        return mapEntityToDto(savedMovie); // Map saved Entity to response DTO
     }
 
-    public Movie updateMovie(Long id, MovieDTO movieDTO) {
+    public ResponseDTO updateMovie(Long id, MovieDTO movieDTO) {
         Movie existingMovie = getMovieById(id);
         if (existingMovie != null) {
-            var updatedMovie = mapDtoToEntity(movieDTO, existingMovie);
-            return movieRepository.save(updatedMovie);
+            var updatedMovie = mapDtoToEntity(movieDTO, existingMovie); // Map request body DTO to Entity
+            Movie savedMovie = movieRepository.save(updatedMovie); // Update in the database
+            return mapEntityToDto(savedMovie); // Map updated Entity to response DTO
+        } else {
+            throw new RuntimeException("Movie with id " + id + " not found.");
         }
-        return null;
     }
 
 

@@ -15,9 +15,9 @@ public class MovieController {
     private MovieService movieService;
 
     @GetMapping("")
-    public ResponseEntity<ResponseFormatter<List<Movie>>> getAllMovies() {
+    public ResponseEntity<ResponseFormatter<List<ResponseDTO>>> getAllMovies() {
         try {
-            List<Movie> movies = movieService.getAllMovies();
+            List<ResponseDTO> movies = movieService.getAllMovies();
             return ResponseEntity.ok(new ResponseFormatter<>(HttpStatus.OK.value(), "Movies fetched successfully", movies));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
@@ -26,9 +26,9 @@ public class MovieController {
     }
 
     @GetMapping("/search")
-    public ResponseEntity<ResponseFormatter<List<Movie>>> getMoviesByTitle(@RequestParam String query) {
+    public ResponseEntity<ResponseFormatter<List<ResponseDTO>>> getMoviesByTitle(@RequestParam String query) {
         try {
-            List<Movie> movies = movieService.findAllMoviesByTitle(query, query);
+            List<ResponseDTO> movies = movieService.findAllMoviesByTitle(query, query);
             return ResponseEntity.ok(new ResponseFormatter<>(HttpStatus.OK.value(), "Movies fetched successfully", movies));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
@@ -53,11 +53,11 @@ public class MovieController {
     }
 
     @PostMapping("")
-    public ResponseEntity<ResponseFormatter<Movie>> createMovie(@RequestBody MovieDTO movieDTO) {
+    public ResponseEntity<ResponseFormatter<ResponseDTO>> createMovie(@RequestBody MovieDTO movieDTO) {
         try {
-            Movie createdMovie = movieService.createMovie(movieDTO);
+            ResponseDTO response = movieService.createMovie(movieDTO);
             return ResponseEntity.status(HttpStatus.CREATED)
-                    .body(new ResponseFormatter<>(HttpStatus.CREATED.value(), "Movie created successfully", createdMovie));
+                    .body(new ResponseFormatter<>(HttpStatus.CREATED.value(), "Movie created successfully", response));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(new ResponseFormatter<>(HttpStatus.INTERNAL_SERVER_ERROR.value(), "An error occurred while creating the movie", null));
@@ -65,11 +65,12 @@ public class MovieController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ResponseFormatter<Movie>> updateMovie(@PathVariable Long id, @RequestBody MovieDTO movieDTO) {
+    public ResponseEntity<ResponseFormatter<ResponseDTO>> updateMovie(
+            @PathVariable Long id, @RequestBody MovieDTO movieDTO) {
         try {
-            Movie updatedMovie = movieService.updateMovie(id, movieDTO);
-            if (updatedMovie != null) {
-                return ResponseEntity.ok(new ResponseFormatter<>(HttpStatus.OK.value(), "Movie updated successfully", updatedMovie));
+            ResponseDTO response = movieService.updateMovie(id, movieDTO);
+            if (response != null) {
+                return ResponseEntity.ok(new ResponseFormatter<>(HttpStatus.OK.value(), "Movie updated successfully", response));
             } else {
                 return ResponseEntity.status(HttpStatus.NOT_FOUND)
                         .body(new ResponseFormatter<>(HttpStatus.NOT_FOUND.value(), "Movie not found", null));

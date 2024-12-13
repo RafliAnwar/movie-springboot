@@ -11,4 +11,10 @@ public class ResponseFormatter <T> {
     private String message;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private T data;
+
+    public ResponseFormatter(int status, String message, T data) {
+        this.status = status;
+        this.message = message;
+        this.data = data;
+    }
 }
