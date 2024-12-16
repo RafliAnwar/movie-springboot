@@ -37,11 +37,12 @@ public class MovieController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ResponseFormatter<Movie>> getMovieById(@PathVariable Long id) {
+    public ResponseEntity<ResponseFormatter<ResponseDTO>> getMovieById(@PathVariable Long id) {
         try {
             Movie movie = movieService.getMovieById(id);
             if (movie != null) {
-                return ResponseEntity.ok(new ResponseFormatter<>(HttpStatus.OK.value(), "Movie fetched successfully", movie));
+                ResponseDTO responseDTO = movieService.mapEntityToDto(movie);
+                return ResponseEntity.ok(new ResponseFormatter<>(HttpStatus.OK.value(), "Movie fetched successfully", responseDTO));
             } else {
                 return ResponseEntity.status(HttpStatus.NOT_FOUND)
                         .body(new ResponseFormatter<>(HttpStatus.NOT_FOUND.value(), "Movie not found", null));
@@ -51,6 +52,7 @@ public class MovieController {
                     .body(new ResponseFormatter<>(HttpStatus.INTERNAL_SERVER_ERROR.value(), "An error occurred while fetching the movie", null));
         }
     }
+
 
     @PostMapping("")
     public ResponseEntity<ResponseFormatter<ResponseDTO>> createMovie(@RequestBody MovieDTO movieDTO) {
@@ -68,9 +70,9 @@ public class MovieController {
     public ResponseEntity<ResponseFormatter<ResponseDTO>> updateMovie(
             @PathVariable Long id, @RequestBody MovieDTO movieDTO) {
         try {
-            ResponseDTO response = movieService.updateMovie(id, movieDTO);
-            if (response != null) {
-                return ResponseEntity.ok(new ResponseFormatter<>(HttpStatus.OK.value(), "Movie updated successfully", response));
+            ResponseDTO responseDTO = movieService.updateMovie(id, movieDTO);
+            if (responseDTO != null) {
+                return ResponseEntity.ok(new ResponseFormatter<>(HttpStatus.OK.value(), "Movie updated successfully", responseDTO));
             } else {
                 return ResponseEntity.status(HttpStatus.NOT_FOUND)
                         .body(new ResponseFormatter<>(HttpStatus.NOT_FOUND.value(), "Movie not found", null));

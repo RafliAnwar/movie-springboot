@@ -69,7 +69,7 @@ public class MovieService {
         return movie;
     }
 
-    private ResponseDTO mapEntityToDto(Movie movie) {
+    public ResponseDTO mapEntityToDto(Movie movie) {
         ResponseDTO dto = new ResponseDTO();
         BeanUtils.copyProperties(movie, dto);
         dto.setGenre_name(movie.getGenre() != null ? movie.getGenre().getGenreName() : null);
