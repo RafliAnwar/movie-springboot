@@ -17,4 +17,5 @@ public class MovieDTO {
     private String photo;
     private String videoUrl;
     private Date releaseDate;
+    private Integer price;
 }

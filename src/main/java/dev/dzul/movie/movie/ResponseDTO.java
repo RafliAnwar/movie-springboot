@@ -18,6 +18,7 @@ public class ResponseDTO {
     private String photo;
     private String videoUrl;
     private Date releaseDate;
+    private Integer price;
 
     public ResponseDTO(){}
 }
