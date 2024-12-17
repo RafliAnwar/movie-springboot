@@ -12,6 +12,8 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
 //    (value = "SELECT Movies (m.id, g.genre_name, m.title, m.studio, m.description, " +
 //            "m.review, m.rating, m.photo, m.video_url, m.release_date) " +
 //            "FROM Movies m JOIN Genres g ON m.id_genre = g.id", nativeQuery = true)
+
+
     List<Movie> findAllByOrderByIdAsc();
 
     List<Movie> findAllByGenre_GenreNameContainingIgnoreCaseOrTitleContainingIgnoreCase(String genre, String title);

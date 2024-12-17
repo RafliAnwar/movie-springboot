@@ -1,11 +1,13 @@
 package dev.dzul.movie.movie;
 
 import dev.dzul.movie.genre.Genre;
+import dev.dzul.movie.transaction.Transaction;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "movies")
@@ -44,4 +46,5 @@ public class Movie {
     @Column(nullable = false)
     private Date releaseDate;
 
+    private Integer price;
 }
