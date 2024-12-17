@@ -25,4 +25,21 @@ public class UserService {
         BeanUtils.copyProperties(savedUser, responseDTO);
         return responseDTO;
     }
+
+    // Method to add balance
+    public ResponseDTO addBalance(Long userId, Integer amount) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("User with ID " + userId + " not found"));
+
+        if (amount <= 0) {
+            throw new IllegalArgumentException("Amount to add must be positive");
+        }
+
+        user.setBalance(user.getBalance() + amount);
+        User updatedUser = userRepository.save(user);
+        // Map updated user to ResponseDTO
+        ResponseDTO responseDTO = new ResponseDTO();
+        BeanUtils.copyProperties(updatedUser, responseDTO);
+        return responseDTO;
+    }
 }
