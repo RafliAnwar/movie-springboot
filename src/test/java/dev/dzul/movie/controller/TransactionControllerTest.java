@@ -33,7 +33,7 @@ public class TransactionControllerTest {
         MockitoAnnotations.openMocks(this);
 
         // Mocked TransactionDTO
-        transactionDTO = new TransactionDTO(1L, 1L, null, null, null, null);
+        transactionDTO = new TransactionDTO(24L, 1L, LocalDateTime.now(), LocalDateTime.now().plusDays(30), "2Ajdkdjkdjk", "PAID");
 
         // Mocked ResponseDTO
         responseDTO = new ResponseDTO(1L, "john_doe", null, LocalDateTime.now(), LocalDateTime.now().plusDays(30), "TXN123", "PAID");

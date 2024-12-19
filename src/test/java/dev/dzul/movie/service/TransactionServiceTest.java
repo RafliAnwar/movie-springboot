@@ -54,10 +54,10 @@ public class TransactionServiceTest {
         transactionDTO = new TransactionDTO(
                 1L,
                 1L,
-                null,
-                null,
-                null,
-                null
+                LocalDateTime.now(),
+                LocalDateTime.now().plusDays(30),
+                "A24385JKDSJFKSD",
+                "PAID"
         );
     }
 
