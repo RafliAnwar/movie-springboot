@@ -7,33 +7,13 @@
 	},
 	"item": [
 		{
-			"name": "findAll",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/movie",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"movie"
-					]
-				}
-			},
-			"response": [
+			"name": "movie",
+			"item": [
 				{
 					"name": "findAll",
-					"originalRequest": {
+					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
 						"url": {
 							"raw": "http://localhost:8080/api/movie",
 							"protocol": "http",
@@ -47,62 +27,66 @@
 							]
 						}
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Date",
-							"value": "Fri, 13 Dec 2024 09:46:24 GMT"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=60"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
+							"name": "findAll",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/movie",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"movie"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 13 Dec 2024 09:46:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Movies fetched successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"genre_name\": \"Drama\",\n            \"title\": \"test DTO1\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure1.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure1.mp4\",\n            \"releaseDate\": \"2023-06-14T17:00:00.000+00:00\"\n        },\n        {\n            \"id\": 2,\n            \"genre_name\": \"Action\",\n            \"title\": \"test DTO2\",\n            \"studio\": \"Heartfelt Films\",\n            \"description\": \"A love story set in the beautiful city of Paris.\",\n            \"review\": \"A heartfelt tale with remarkable performances.\",\n            \"rating\": 8,\n            \"photo\": \"https://example.com/photos/paris.jpg\",\n            \"videoUrl\": \"https://example.com/videos/paris.mp4\",\n            \"releaseDate\": \"2022-02-13T17:00:00.000+00:00\"\n        },\n        {\n            \"id\": 3,\n            \"genre_name\": \"Sci-Fi\",\n            \"title\": \"test DTO3\",\n            \"studio\": \"Mystery Productions\",\n            \"description\": \"An archaeologist uncovers secrets in an ancient tomb.\",\n            \"review\": \"A captivating mystery that keeps you on the edge of your seat.\",\n            \"rating\": 7,\n            \"photo\": \"https://example.com/photos/tomb.jpg\",\n            \"videoUrl\": \"https://example.com/videos/tomb.mp4\",\n            \"releaseDate\": \"2021-10-29T17:00:00.000+00:00\"\n        },\n        {\n            \"id\": 4,\n            \"genre_name\": \"Action\",\n            \"title\": \"test DTO4 drama\",\n            \"studio\": \"Cosmos Studios\",\n            \"description\": \"A sci-fi adventure to explore distant galaxies.\",\n            \"review\": \"A spectacular journey that blends science and fiction.\",\n            \"rating\": 10,\n            \"photo\": \"https://example.com/photos/stars.jpg\",\n            \"videoUrl\": \"https://example.com/videos/stars.mp4\",\n            \"releaseDate\": \"2023-12-31T17:00:00.000+00:00\"\n        },\n        {\n            \"id\": 5,\n            \"genre_name\": \"Action\",\n            \"title\": \"Horror Movie\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        },\n        {\n            \"id\": 6,\n            \"genre_name\": \"Drama\",\n            \"title\": \"coba666\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        },\n        {\n            \"id\": 52,\n            \"genre_name\": \"Action\",\n            \"title\": \"Stranger Things\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        },\n        {\n            \"id\": 53,\n            \"genre_name\": \"Action\",\n            \"title\": \"test DTO\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        },\n        {\n            \"id\": 102,\n            \"genre_name\": \"Action\",\n            \"title\": \"test DTO\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        },\n        {\n            \"id\": 152,\n            \"genre_name\": \"Action\",\n            \"title\": \"Ea\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        },\n        {\n            \"id\": 302,\n            \"genre_name\": \"Sci-Fi\",\n            \"title\": \"001-Code\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        },\n        {\n            \"id\": 352,\n            \"genre_name\": \"Horror\",\n            \"title\": \"cobaDTOdi352\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        },\n        {\n            \"id\": 402,\n            \"genre_name\": \"Sci-Fi\",\n            \"title\": \"InsurGent\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        },\n        {\n            \"id\": 502,\n            \"genre_name\": \"Horror\",\n            \"title\": \"Divergent\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        },\n        {\n            \"id\": 552,\n            \"genre_name\": \"Horror\",\n            \"title\": \"Divergent 3\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        }\n    ]\n}"
 						}
-					],
-					"cookie": [],
-					"body": "{\n    \"status\": 200,\n    \"message\": \"Movies fetched successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"genre_name\": \"Drama\",\n            \"title\": \"test DTO1\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure1.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure1.mp4\",\n            \"releaseDate\": \"2023-06-14T17:00:00.000+00:00\"\n        },\n        {\n            \"id\": 2,\n            \"genre_name\": \"Action\",\n            \"title\": \"test DTO2\",\n            \"studio\": \"Heartfelt Films\",\n            \"description\": \"A love story set in the beautiful city of Paris.\",\n            \"review\": \"A heartfelt tale with remarkable performances.\",\n            \"rating\": 8,\n            \"photo\": \"https://example.com/photos/paris.jpg\",\n            \"videoUrl\": \"https://example.com/videos/paris.mp4\",\n            \"releaseDate\": \"2022-02-13T17:00:00.000+00:00\"\n        },\n        {\n            \"id\": 3,\n            \"genre_name\": \"Sci-Fi\",\n            \"title\": \"test DTO3\",\n            \"studio\": \"Mystery Productions\",\n            \"description\": \"An archaeologist uncovers secrets in an ancient tomb.\",\n            \"review\": \"A captivating mystery that keeps you on the edge of your seat.\",\n            \"rating\": 7,\n            \"photo\": \"https://example.com/photos/tomb.jpg\",\n            \"videoUrl\": \"https://example.com/videos/tomb.mp4\",\n            \"releaseDate\": \"2021-10-29T17:00:00.000+00:00\"\n        },\n        {\n            \"id\": 4,\n            \"genre_name\": \"Action\",\n            \"title\": \"test DTO4 drama\",\n            \"studio\": \"Cosmos Studios\",\n            \"description\": \"A sci-fi adventure to explore distant galaxies.\",\n            \"review\": \"A spectacular journey that blends science and fiction.\",\n            \"rating\": 10,\n            \"photo\": \"https://example.com/photos/stars.jpg\",\n            \"videoUrl\": \"https://example.com/videos/stars.mp4\",\n            \"releaseDate\": \"2023-12-31T17:00:00.000+00:00\"\n        },\n        {\n            \"id\": 5,\n            \"genre_name\": \"Action\",\n            \"title\": \"Horror Movie\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        },\n        {\n            \"id\": 6,\n            \"genre_name\": \"Drama\",\n            \"title\": \"coba666\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        },\n        {\n            \"id\": 52,\n            \"genre_name\": \"Action\",\n            \"title\": \"Stranger Things\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        },\n        {\n            \"id\": 53,\n            \"genre_name\": \"Action\",\n            \"title\": \"test DTO\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        },\n        {\n            \"id\": 102,\n            \"genre_name\": \"Action\",\n            \"title\": \"test DTO\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        },\n        {\n            \"id\": 152,\n            \"genre_name\": \"Action\",\n            \"title\": \"Ea\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        },\n        {\n            \"id\": 302,\n            \"genre_name\": \"Sci-Fi\",\n            \"title\": \"001-Code\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        },\n        {\n            \"id\": 352,\n            \"genre_name\": \"Horror\",\n            \"title\": \"cobaDTOdi352\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        },\n        {\n            \"id\": 402,\n            \"genre_name\": \"Sci-Fi\",\n            \"title\": \"InsurGent\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        },\n        {\n            \"id\": 502,\n            \"genre_name\": \"Horror\",\n            \"title\": \"Divergent\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        },\n        {\n            \"id\": 552,\n            \"genre_name\": \"Horror\",\n            \"title\": \"Divergent 3\",\n            \"studio\": \"Adventure Studios\",\n            \"description\": \"An epic journey across uncharted territories.\",\n            \"review\": \"A thrilling and visually stunning masterpiece.\",\n            \"rating\": 9,\n            \"photo\": \"https://example.com/photos/adventure.jpg\",\n            \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n            \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n        }\n    ]\n}"
-				}
-			]
-		},
-		{
-			"name": "search",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/movie",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"movie"
 					]
-				}
-			},
-			"response": [
+				},
 				{
 					"name": "search",
-					"originalRequest": {
+					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/movie/search?query=test DTO4 drama",
+							"raw": "http://localhost:8080/api/movie",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -110,80 +94,79 @@
 							"port": "8080",
 							"path": [
 								"api",
-								"movie",
-								"search"
-							],
-							"query": [
-								{
-									"key": "genre",
-									"value": "Action",
-									"disabled": true
-								},
-								{
-									"key": "title",
-									"value": "stranger",
-									"disabled": true
-								},
-								{
-									"key": "query",
-									"value": "test DTO4 drama"
-								}
+								"movie"
 							]
 						}
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Date",
-							"value": "Fri, 13 Dec 2024 09:54:54 GMT"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=60"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
+							"name": "search",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/movie/search?query=test DTO4 drama",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"movie",
+										"search"
+									],
+									"query": [
+										{
+											"key": "genre",
+											"value": "Action",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "stranger",
+											"disabled": true
+										},
+										{
+											"key": "query",
+											"value": "test DTO4 drama"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 13 Dec 2024 09:54:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Movies fetched successfully\",\n    \"data\": [\n        {\n            \"id\": 4,\n            \"genre_name\": \"Action\",\n            \"title\": \"test DTO4 drama\",\n            \"studio\": \"Cosmos Studios\",\n            \"description\": \"A sci-fi adventure to explore distant galaxies.\",\n            \"review\": \"A spectacular journey that blends science and fiction.\",\n            \"rating\": 10,\n            \"photo\": \"https://example.com/photos/stars.jpg\",\n            \"videoUrl\": \"https://example.com/videos/stars.mp4\",\n            \"releaseDate\": \"2023-12-31T17:00:00.000+00:00\"\n        }\n    ]\n}"
 						}
-					],
-					"cookie": [],
-					"body": "{\n    \"status\": 200,\n    \"message\": \"Movies fetched successfully\",\n    \"data\": [\n        {\n            \"id\": 4,\n            \"genre_name\": \"Action\",\n            \"title\": \"test DTO4 drama\",\n            \"studio\": \"Cosmos Studios\",\n            \"description\": \"A sci-fi adventure to explore distant galaxies.\",\n            \"review\": \"A spectacular journey that blends science and fiction.\",\n            \"rating\": 10,\n            \"photo\": \"https://example.com/photos/stars.jpg\",\n            \"videoUrl\": \"https://example.com/videos/stars.mp4\",\n            \"releaseDate\": \"2023-12-31T17:00:00.000+00:00\"\n        }\n    ]\n}"
-				}
-			]
-		},
-		{
-			"name": "findById",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/movie/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"movie",
-						"1"
 					]
-				}
-			},
-			"response": [
+				},
 				{
-					"name": "findById (ok)",
-					"originalRequest": {
+					"name": "findById",
+					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -200,141 +183,111 @@
 							]
 						}
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Date",
-							"value": "Fri, 13 Dec 2024 07:08:42 GMT"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=60"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"status\": 200,\n    \"message\": \"Movie fetched successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"genre\": {\n            \"id\": 2,\n            \"genreName\": \"Drama\"\n        },\n        \"title\": \"test DTO1\",\n        \"studio\": \"Adventure Studios\",\n        \"description\": \"An epic journey across uncharted territories.\",\n        \"review\": \"A thrilling and visually stunning masterpiece.\",\n        \"rating\": 9,\n        \"photo\": \"https://example.com/photos/adventure1.jpg\",\n        \"videoUrl\": \"https://example.com/videos/adventure1.mp4\",\n        \"releaseDate\": \"2023-06-14T17:00:00.000+00:00\"\n    }\n}"
-				},
-				{
-					"name": "findById (error)",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/api/movie/999",
-							"protocol": "http",
-							"host": [
-								"localhost"
+							"name": "findById (ok)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/movie/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"movie",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 13 Dec 2024 07:08:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
 							],
-							"port": "8080",
-							"path": [
-								"api",
-								"movie",
-								"999"
-							]
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Movie fetched successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"genre\": {\n            \"id\": 2,\n            \"genreName\": \"Drama\"\n        },\n        \"title\": \"test DTO1\",\n        \"studio\": \"Adventure Studios\",\n        \"description\": \"An epic journey across uncharted territories.\",\n        \"review\": \"A thrilling and visually stunning masterpiece.\",\n        \"rating\": 9,\n        \"photo\": \"https://example.com/photos/adventure1.jpg\",\n        \"videoUrl\": \"https://example.com/videos/adventure1.mp4\",\n        \"releaseDate\": \"2023-06-14T17:00:00.000+00:00\"\n    }\n}"
+						},
+						{
+							"name": "findById (error)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/movie/999",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"movie",
+										"999"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 13 Dec 2024 07:09:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 404,\n    \"message\": \"Movie not found\"\n}"
 						}
-					},
-					"status": "Not Found",
-					"code": 404,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Date",
-							"value": "Fri, 13 Dec 2024 07:09:21 GMT"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=60"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"status\": 404,\n    \"message\": \"Movie not found\"\n}"
-				}
-			]
-		},
-		{
-			"name": "findByLocation",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/runs/location/INDOOR",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"runs",
-						"location",
-						"INDOOR"
 					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "create",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "\"id\": 1,\n\"id_genre\": 1,\n\"title\": \"The Grand Adventure\",\n\"studio\": \"Adventure Studios\",\n\"description\": \"An epic journey across uncharted territories.\",\n\"review\": \"A thrilling and visually stunning masterpiece.\",\n\"rating\": 9,\n\"photo\": \"https://example.com/photos/adventure.jpg\",\n\"video_url\": \"https://example.com/videos/adventure.mp4\",\n\"release_date\": \"2023-06-15\"",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/api/movie",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"movie"
-					]
-				}
-			},
-			"response": [
 				{
-					"name": "create (error)",
-					"originalRequest": {
+					"name": "create",
+					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id_genre\": 3,\n    \"studio\": \"Adventure Studios\",\n    \"description\": \"An epic journey across uncharted territories.\",\n    \"review\": \"A thrilling and visually stunning masterpiece.\",\n    \"rating\": 9,\n    \"photo\": \"https://example.com/photos/adventure.jpg\",\n    \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n    \"releaseDate\": \"2023-06-15\"\n}",
+							"raw": "\"id\": 1,\n\"id_genre\": 1,\n\"title\": \"The Grand Adventure\",\n\"studio\": \"Adventure Studios\",\n\"description\": \"An epic journey across uncharted territories.\",\n\"review\": \"A thrilling and visually stunning masterpiece.\",\n\"rating\": 9,\n\"photo\": \"https://example.com/photos/adventure.jpg\",\n\"video_url\": \"https://example.com/videos/adventure.mp4\",\n\"release_date\": \"2023-06-15\"",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -354,124 +307,123 @@
 							]
 						}
 					},
-					"status": "Internal Server Error",
-					"code": 500,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Date",
-							"value": "Fri, 13 Dec 2024 07:10:26 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "close"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"status\": 500,\n    \"message\": \"An error occurred while creating the movie\"\n}"
-				},
-				{
-					"name": "create (ok)",
-					"originalRequest": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"id_genre\": 5,\n    \"title\": \"Divergent 9\",\n    \"studio\": \"Adventure Studios\",\n    \"description\": \"An epic journey across uncharted territories.\",\n    \"review\": \"A thrilling and visually stunning masterpiece.\",\n    \"rating\": 9,\n    \"photo\": \"https://example.com/photos/adventure.jpg\",\n    \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n    \"releaseDate\": \"2023-06-15\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+							"name": "create (error)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id_genre\": 3,\n    \"studio\": \"Adventure Studios\",\n    \"description\": \"An epic journey across uncharted territories.\",\n    \"review\": \"A thrilling and visually stunning masterpiece.\",\n    \"rating\": 9,\n    \"photo\": \"https://example.com/photos/adventure.jpg\",\n    \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n    \"releaseDate\": \"2023-06-15\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/movie",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"movie"
+									]
 								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/movie",
-							"protocol": "http",
-							"host": [
-								"localhost"
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 13 Dec 2024 07:10:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
 							],
-							"port": "8080",
-							"path": [
-								"api",
-								"movie"
-							]
+							"cookie": [],
+							"body": "{\n    \"status\": 500,\n    \"message\": \"An error occurred while creating the movie\"\n}"
+						},
+						{
+							"name": "create (ok)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id_genre\": 5,\n    \"title\": \"Divergent 9\",\n    \"studio\": \"Adventure Studios\",\n    \"description\": \"An epic journey across uncharted territories.\",\n    \"review\": \"A thrilling and visually stunning masterpiece.\",\n    \"rating\": 9,\n    \"photo\": \"https://example.com/photos/adventure.jpg\",\n    \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n    \"releaseDate\": \"2023-06-15\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/movie",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"movie"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 13 Dec 2024 08:36:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"message\": \"Movie created successfully\",\n    \"data\": {\n        \"id\": 552,\n        \"genre_name\": \"Horror\",\n        \"title\": \"Divergent 3\",\n        \"studio\": \"Adventure Studios\",\n        \"description\": \"An epic journey across uncharted territories.\",\n        \"review\": \"A thrilling and visually stunning masterpiece.\",\n        \"rating\": 9,\n        \"photo\": \"https://example.com/photos/adventure.jpg\",\n        \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n        \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n    }\n}"
 						}
-					},
-					"status": "Created",
-					"code": 201,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Date",
-							"value": "Fri, 13 Dec 2024 08:36:17 GMT"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=60"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"status\": 201,\n    \"message\": \"Movie created successfully\",\n    \"data\": {\n        \"id\": 552,\n        \"genre_name\": \"Horror\",\n        \"title\": \"Divergent 3\",\n        \"studio\": \"Adventure Studios\",\n        \"description\": \"An epic journey across uncharted territories.\",\n        \"review\": \"A thrilling and visually stunning masterpiece.\",\n        \"rating\": 9,\n        \"photo\": \"https://example.com/photos/adventure.jpg\",\n        \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n        \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n    }\n}"
-				}
-			]
-		},
-		{
-			"name": "update",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"id\": 3,\n    \"title\": \"Wednesday Afternoon Run!!!\",\n    \"startedOn\": \"2022-12-12T15:00:12.49766\",\n    \"completedOn\": \"2022-12-12T15:20:12.497678\",\n    \"miles\": 2,\n    \"location\": \"INDOOR\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/api/movie/3",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"movie",
-						"3"
 					]
-				}
-			},
-			"response": [
+				},
 				{
 					"name": "update",
-					"originalRequest": {
+					"request": {
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id_genre\":1,\n    \"title\": \"Horror Movie\",\n    \"studio\": \"Adventure Studios\",\n    \"description\": \"An epic journey across uncharted territories.\",\n    \"review\": \"A thrilling and visually stunning masterpiece.\",\n    \"rating\": 9,\n    \"photo\": \"https://example.com/photos/adventure.jpg\",\n    \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n    \"releaseDate\": \"2023-06-15\"\n}",
+							"raw": "{\n    \"id\": 3,\n    \"title\": \"Wednesday Afternoon Run!!!\",\n    \"startedOn\": \"2022-12-12T15:00:12.49766\",\n    \"completedOn\": \"2022-12-12T15:20:12.497678\",\n    \"miles\": 2,\n    \"location\": \"INDOOR\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -479,7 +431,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/movie/5",
+							"raw": "http://localhost:8080/api/movie/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -488,67 +440,232 @@
 							"path": [
 								"api",
 								"movie",
-								"5"
+								"3"
 							]
 						}
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Date",
-							"value": "Fri, 13 Dec 2024 08:49:09 GMT"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=60"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
+							"name": "update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id_genre\":1,\n    \"title\": \"Horror Movie\",\n    \"studio\": \"Adventure Studios\",\n    \"description\": \"An epic journey across uncharted territories.\",\n    \"review\": \"A thrilling and visually stunning masterpiece.\",\n    \"rating\": 9,\n    \"photo\": \"https://example.com/photos/adventure.jpg\",\n    \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n    \"releaseDate\": \"2023-06-15\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/movie/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"movie",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 13 Dec 2024 08:49:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Movie updated successfully\",\n    \"data\": {\n        \"id\": 5,\n        \"genre_name\": \"Action\",\n        \"title\": \"Horror Movie\",\n        \"studio\": \"Adventure Studios\",\n        \"description\": \"An epic journey across uncharted territories.\",\n        \"review\": \"A thrilling and visually stunning masterpiece.\",\n        \"rating\": 9,\n        \"photo\": \"https://example.com/photos/adventure.jpg\",\n        \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n        \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n    }\n}"
 						}
-					],
-					"cookie": [],
-					"body": "{\n    \"status\": 200,\n    \"message\": \"Movie updated successfully\",\n    \"data\": {\n        \"id\": 5,\n        \"genre_name\": \"Action\",\n        \"title\": \"Horror Movie\",\n        \"studio\": \"Adventure Studios\",\n        \"description\": \"An epic journey across uncharted territories.\",\n        \"review\": \"A thrilling and visually stunning masterpiece.\",\n        \"rating\": 9,\n        \"photo\": \"https://example.com/photos/adventure.jpg\",\n        \"videoUrl\": \"https://example.com/videos/adventure.mp4\",\n        \"releaseDate\": \"2023-06-15T00:00:00.000+00:00\"\n    }\n}"
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/runs/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"runs",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete (error)",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/movie/99999",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"movie",
+										"99999"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 13 Dec 2024 06:57:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 500,\n    \"message\": \"Movie with id: 99999 is not found\"\n}"
+						}
+					]
 				}
 			]
 		},
 		{
-			"name": "delete",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/runs/3",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"runs",
-						"3"
-					]
-				}
-			},
-			"response": [
+			"name": "user",
+			"item": [
 				{
-					"name": "delete (error)",
-					"originalRequest": {
-						"method": "DELETE",
+					"name": "registerUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\"id\": 1,\n\"id_genre\": 1,\n\"title\": \"The Grand Adventure\",\n\"studio\": \"Adventure Studios\",\n\"description\": \"An epic journey across uncharted territories.\",\n\"review\": \"A thrilling and visually stunning masterpiece.\",\n\"rating\": 9,\n\"photo\": \"https://example.com/photos/adventure.jpg\",\n\"video_url\": \"https://example.com/videos/adventure.mp4\",\n\"release_date\": \"2023-06-15\"",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add balance",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 50000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/2/balance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"2",
+								"balance"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subs",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/movie/99999",
+							"raw": "http://localhost:8080/api/subs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"subs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/movie/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -557,33 +674,125 @@
 							"path": [
 								"api",
 								"movie",
-								"99999"
+								"1"
 							]
 						}
 					},
-					"status": "Internal Server Error",
-					"code": 500,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"id_genre\": 1,\n    \"title\": \"The Grand Adventure\",\n    \"studio\": \"Adventure Studios\",\n    \"description\": \"An epic journey across uncharted territories.\",\n    \"review\": \"A thrilling and visually stunning masterpiece.\",\n    \"rating\": 9,\n    \"photo\": \"https://example.com/photos/adventure.jpg\",\n    \"video_url\": \"https://example.com/videos/adventure.mp4\",\n    \"release_date\": \"2023-06-15\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Date",
-							"value": "Fri, 13 Dec 2024 06:57:58 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "close"
+						"url": {
+							"raw": "http://localhost:8080/api/subs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"subs"
+							]
 						}
-					],
-					"cookie": [],
-					"body": "{\n    \"status\": 500,\n    \"message\": \"Movie with id: 99999 is not found\"\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Basic\",\n    \"price\": 50000,\n    \"duration\": 15,\n    \"is_4k\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/subs/102",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"subs",
+								"102"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/subs/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"subs",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transaction",
+			"item": [
+				{
+					"name": "create Transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_user\": 1,\n    \"id_subscription\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"transactions"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
