@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
+
+
 @Data
 public class MovieDTO {
     private Long id_genre;
